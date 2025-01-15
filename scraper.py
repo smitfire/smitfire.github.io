@@ -60,6 +60,8 @@ try:
                 )
                 title = title_tag.get_text(strip=True)
                 job_url = title_tag["href"] if title_tag else "N/A"
+                if job_url != "N/A":
+                    job_url = job_url.split("?")[0]
             except AttributeError:
                 title = "N/A"
                 job_url = "N/A"
