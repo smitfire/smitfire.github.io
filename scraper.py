@@ -40,7 +40,7 @@ try:
 
     # Step 3: Extract job information across pages
     job_data = []
-    for _ in range(10):  # Loop through 8 pages
+    for _ in range(12):  # Loop through 8 pages
         soup = BeautifulSoup(driver.page_source, "html.parser")
         job_items = soup.select(
             "body > div.application-outlet > div.authentication-outlet > div > main > section > div > div:nth-child(4) > div > ul > li"
